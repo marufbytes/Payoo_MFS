@@ -11,13 +11,10 @@ document.getElementById('login-btn').addEventListener('click', function () {
 
     //3. match pin and mobile number
     if (contactNumber == '01234567890' && pin == '1234') {
-        //3-1 true::>> alert homepage
         alert('Login successful')
         // window.location.replace("/home.html")
         window.location.assign("/home.html")
-
     }
-    //3-1 true::>> alert return
     else{
         alert("Login failed")
         return;
