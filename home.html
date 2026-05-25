@@ -56,12 +56,12 @@
 
         <div class="buttons grid grid-cols-3 gap-3">
 
-            <button onclick="showOlny('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-1.png" alt="">
                 <p>Add Money</p>
             </button>
 
-            <button onclick="showOlny('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
@@ -72,7 +72,7 @@
             </button>
 
             <button class="btn flex-col h-full py-4 btn-primary btn-soft">
-                <img src="assets/opt-4png" alt="">
+                <img src="assets/opt-4.png" alt="">
                 <p>Get Bonus</p>
             </button>
 
@@ -81,7 +81,7 @@
                 <p>Pay Bill</p>
             </button>
 
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('history')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="assets/opt-6.png" alt="">
                 <p>Transaction</p>
             </button>
@@ -149,7 +149,12 @@
         </div>
     </section>
 
-    <section></section>
+    <section id="history" class="w-11/12 mx-auto py-5 space-y-5 hidden">
+        <h2 class="text-xl font-bold">Transaction</h2>
+        <div id="history-content">
+            <div class="transaction-card p-5"></div>
+        </div>
+    </section>
 
     <script src="script/machine.js"></script>
     <script src="script/cashout.js"></script>

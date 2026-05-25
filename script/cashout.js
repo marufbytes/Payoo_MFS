@@ -55,6 +55,18 @@ document.getElementById('cashout-btn').addEventListener('click', function () {
     if (pin == "1234") {
         alert("Cashout Successful");
         setBalance(newBalance);
+        //1. History container retrive
+        const history = document.getElementById('history-content');
+
+        const newHistory = document.createElement('div');
+
+        newHistory.innerHTML = `
+    <div class="transaction-card p-5 bg-base-100 rounded-xl mt-3">
+        Cashout ${cashoutAmount} successful from ${cashoutNumber} at ${new Date()}
+    </div>
+`;
+
+        history.append(newHistory);
     }
     else {
         alert("Cashout Failed");
